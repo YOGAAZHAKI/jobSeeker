@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,8 +7,6 @@
    Design System: Modern, trustworthy, career-focused
    Colors: Deep navy (trust), Teal (growth), Warm accents
 */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 @layer base {
   :root {
@@ -68,11 +67,11 @@
     --gradient-hero: linear-gradient(160deg, hsl(222, 65%, 12%) 0%, hsl(222, 60%, 20%) 25%, hsl(220, 55%, 28%) 50%, hsl(200, 50%, 25%) 75%, hsl(172, 55%, 28%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(220, 25%, 97%) 100%);
     --gradient-mesh: radial-gradient(at 40% 20%, hsl(172, 66%, 40% / 0.15) 0px, transparent 50%),
-                     radial-gradient(at 80% 0%, hsl(222, 59%, 40% / 0.2) 0px, transparent 50%),
-                     radial-gradient(at 0% 50%, hsl(172, 66%, 35% / 0.1) 0px, transparent 50%),
-                     radial-gradient(at 80% 50%, hsl(220, 60%, 25% / 0.15) 0px, transparent 50%),
-                     radial-gradient(at 0% 100%, hsl(172, 70%, 30% / 0.1) 0px, transparent 50%),
-                     radial-gradient(at 80% 100%, hsl(222, 55%, 35% / 0.1) 0px, transparent 50%);
+      radial-gradient(at 80% 0%, hsl(222, 59%, 40% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(172, 66%, 35% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(220, 60%, 25% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(172, 70%, 30% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, hsl(222, 55%, 35% / 0.1) 0px, transparent 50%);
     --gradient-noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 
     /* Premium Shadows - Elevated Depth */
@@ -141,9 +140,9 @@
     --gradient-hero: linear-gradient(160deg, hsl(222, 55%, 6%) 0%, hsl(222, 55%, 12%) 25%, hsl(220, 50%, 18%) 50%, hsl(200, 45%, 16%) 75%, hsl(172, 50%, 18%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(222, 47%, 14%) 0%, hsl(222, 47%, 11%) 100%);
     --gradient-mesh: radial-gradient(at 40% 20%, hsl(172, 66%, 40% / 0.12) 0px, transparent 50%),
-                     radial-gradient(at 80% 0%, hsl(222, 59%, 50% / 0.15) 0px, transparent 50%),
-                     radial-gradient(at 0% 50%, hsl(172, 66%, 35% / 0.08) 0px, transparent 50%),
-                     radial-gradient(at 80% 50%, hsl(220, 60%, 35% / 0.12) 0px, transparent 50%);
+      radial-gradient(at 80% 0%, hsl(222, 59%, 50% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(172, 66%, 35% / 0.08) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(220, 60%, 35% / 0.12) 0px, transparent 50%);
 
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.25), 0 1px 3px 0 hsl(0 0% 0% / 0.35);
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.35), 0 2px 4px -2px hsl(0 0% 0% / 0.25), 0 0 0 1px hsl(0 0% 100% / 0.03);
@@ -177,7 +176,12 @@
     font-feature-settings: "cv11", "ss01";
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
     @apply font-semibold tracking-tight;
   }
@@ -278,7 +282,7 @@
     @apply backdrop-blur-2xl;
     background: linear-gradient(135deg, hsl(0 0% 100% / 0.9) 0%, hsl(0 0% 100% / 0.7) 100%);
     border: 1px solid hsl(0 0% 100% / 0.4);
-    box-shadow: 
+    box-shadow:
       0 20px 40px hsl(222 47% 11% / 0.1),
       0 8px 16px hsl(222 47% 11% / 0.05),
       inset 0 1px 0 0 hsl(0 0% 100% / 0.6),
@@ -303,16 +307,19 @@
 
   .border-gradient {
     border: 1px solid transparent;
-    background: 
+    background:
       linear-gradient(var(--background), var(--background)) padding-box,
       var(--gradient-accent) border-box;
   }
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-12px);
   }
@@ -323,6 +330,7 @@
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -333,15 +341,19 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 @keyframes gradientShift {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -351,6 +363,7 @@
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
